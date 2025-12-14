@@ -1,6 +1,5 @@
-class NegTokenResp(Object):
+from .base import NegToken
+
+class NegTokenResp(NegToken):
 	def __init__(self):
-		self.negResult
-		self.supportedMech
-		self.responseToken
-		self.mechListMIC
+		super(NegTokenResp, self).__init__(3)

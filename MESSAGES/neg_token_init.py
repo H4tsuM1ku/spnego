@@ -1,6 +1,11 @@
-class NegTokenInit(Object):
+from spnego.constants import MS_KILE_OID, KRB5_OID, NTLM_OID, SPNEGOEX_OID
+
+from .base import NegToken
+
+class NegTokenInit(NegToken):
 	def __init__(self):
-		self.mechTypes
-		self.reqFlags
-		self.mechToken
-		self.mechListMIC
+		super(NegTokenInit, self).__init__(1)
+
+		self.mechTypes = [
+			NTLM_OID
+		]
